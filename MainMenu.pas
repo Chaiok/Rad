@@ -25,6 +25,7 @@ type
     oplata: TMenuItem;
     procedure dostavkaClick(Sender: TObject);
     procedure oplataClick(Sender: TObject);
+    procedure otchetClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,7 +39,7 @@ implementation
 
 {$R *.dfm}
 
-uses Dostavka,Oplata;
+uses Dostavka,Oplata,Otchet;
 
 procedure TForm1.dostavkaClick(Sender: TObject);
 begin
@@ -48,6 +49,11 @@ end;
 procedure TForm1.oplataClick(Sender: TObject);
 begin
   Form4.ShowModal;
+end;
+
+procedure TForm1.otchetClick(Sender: TObject);
+begin
+  Form5.ShowModal;
 end;
 
 end.

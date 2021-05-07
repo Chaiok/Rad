@@ -66,6 +66,7 @@ object Form1: TForm1
     end
     object otchet: TMenuItem
       Caption = 'otchet'
+      OnClick = otchetClick
     end
     object diagramma: TMenuItem
       Caption = 'diagramma'

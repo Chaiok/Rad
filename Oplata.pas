@@ -71,6 +71,8 @@ begin
   Data.SqlTimSt.DateTimeToSQLTimeStamp(System.DateUtils.DateOf(text2));
   FDQuery2.ExecSQL;
   //FDQuery2.Open;
+  FDQuery2.Connection.Commit;
+  FDConnection1.Commit;
 end;
 
 procedure TForm4.Button2Click(Sender: TObject);
@@ -80,6 +82,8 @@ begin
   FDQuery2.ParamByName('iddostavka').AsInteger := StrToInt(iddostavki.Text);
   FDQuery2.ParamByName('oplacheno').AsFloat := StrToFloat(Oplata.Text);
   FDQuery2.ExecSQL;
+  FDQuery2.Connection.Commit;
+  FDConnection1.Commit;
 end;
 
 procedure TForm4.Button3Click(Sender: TObject);
