@@ -70,6 +70,7 @@ object Form1: TForm1
     end
     object diagramma: TMenuItem
       Caption = 'diagramma'
+      OnClick = diagrammaClick
     end
   end
 end

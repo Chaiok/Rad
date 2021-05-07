@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.676,D:\rad\Unit2.pas=D:\rad\Docladnay.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.676,D:\rad\Unit2.dfm=D:\rad\Docladnay.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.992,D:\rad\Unit1.pas=D:\rad\MainMenu.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.696,=D:\rad\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.645,D:\rad\Unit3.dfm=D:\rad\Dostavka.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.270,=D:\rad\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.484,D:\rad\Unit2.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.992,D:\rad\MainMenu.pas=D:\rad\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.676,D:\rad\Docladnay.dfm=D:\rad\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.945,D:\rad\Unit5.dfm=D:\rad\Otchet.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.194,D:\rad\Unit4.dfm=D:\rad\Oplata.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.645,D:\rad\Dostavka.pas=D:\rad\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.645,D:\rad\Dostavka.dfm=D:\rad\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.471,D:\rad\Unit6.pas=D:\rad\Diagramma.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.617,=D:\rad\Unit6.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.676,D:\rad\Docladnay.pas=D:\rad\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.471,D:\rad\Unit6.dfm=D:\rad\Diagramma.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.176,=D:\rad\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.388,=D:\rad\Unit3.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.645,D:\rad\Unit3.pas=D:\rad\Dostavka.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.194,D:\rad\Oplata.pas=D:\rad\Unit4.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.992,D:\rad\Unit1.dfm=D:\rad\MainMenu.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.945,D:\rad\Unit5.pas=D:\rad\Otchet.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.254,=D:\rad\Unit5.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.849,=D:\rad\Unit4.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.194,D:\rad\Oplata.dfm=D:\rad\Unit4.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.194,D:\rad\Unit4.pas=D:\rad\Oplata.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.388,=D:\rad\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.484,D:\rad\Unit2.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.270,=D:\rad\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.992,D:\rad\MainMenu.dfm=D:\rad\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.028,D:\rad\Project1.dproj=D:\rad\Project1.dproj</Transaction>
-    <Transaction>2021.05.07 17:45:31.254,=D:\rad\Unit5.pas</Transaction>
-    <Transaction>2021.05.07 17:45:51.945,D:\rad\Otchet.dfm=D:\rad\Unit5.dfm</Transaction>
-    <Transaction>2021.05.07 17:45:51.945,D:\rad\Otchet.pas=D:\rad\Unit5.pas</Transaction>
-    <Transaction>2021.05.07 21:49:54.617,=D:\rad\Unit6.pas</Transaction>
-    <Transaction>2021.05.07 21:50:07.471,D:\rad\Diagramma.dfm=D:\rad\Unit6.dfm</Transaction>
-    <Transaction>2021.05.07 21:50:07.471,D:\rad\Diagramma.pas=D:\rad\Unit6.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.696,=D:\rad\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

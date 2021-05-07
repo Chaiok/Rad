@@ -26,6 +26,7 @@ type
     procedure dostavkaClick(Sender: TObject);
     procedure oplataClick(Sender: TObject);
     procedure otchetClick(Sender: TObject);
+    procedure diagrammaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,7 +40,12 @@ implementation
 
 {$R *.dfm}
 
-uses Dostavka,Oplata,Otchet;
+uses Dostavka,Oplata,Otchet,Diagramma;
+
+procedure TForm1.diagrammaClick(Sender: TObject);
+begin
+  Form6.ShowModal;
+end;
 
 procedure TForm1.dostavkaClick(Sender: TObject);
 begin
