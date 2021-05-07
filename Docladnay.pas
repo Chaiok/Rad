@@ -48,6 +48,8 @@ procedure TForm2.Button1Click(Sender: TObject);
 var text1,text2: string;
     text3,text4: double;
 begin
+  //FDConnection1.Connected:=False;
+  //FDConnection1.Connected:=True;
   text1:=TovarName.Text;
   text2:=ID_IZM.Text;
   text3:=StrToFloat(Price.text);
@@ -60,6 +62,8 @@ begin
   FDQuery2.ParamByName('kolvo').AsFloat := text3;
   FDQuery2.ParamByName('price').AsFloat:=text4;
   FDQuery2.ExecSQL;
+  FDQuery2.Connection.Commit;
+  FDConnection1.Commit;
 end;
 
 procedure TForm2.Button2Click(Sender: TObject);

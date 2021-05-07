@@ -51,8 +51,8 @@ object Form1: TForm1
     Top = 144
   end
   object MainMenu1: TMainMenu
-    Left = 616
-    Top = 264
+    Left = 608
+    Top = 16
     object magazin: TMenuItem
       Caption = 'magazin'
       object dostavka: TMenuItem
@@ -61,6 +61,7 @@ object Form1: TForm1
       end
       object oplata: TMenuItem
         Caption = 'oplata'
+        OnClick = oplataClick
       end
     end
     object otchet: TMenuItem

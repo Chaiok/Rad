@@ -24,6 +24,7 @@ type
     diagramma: TMenuItem;
     oplata: TMenuItem;
     procedure dostavkaClick(Sender: TObject);
+    procedure oplataClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,11 +38,16 @@ implementation
 
 {$R *.dfm}
 
-uses Dostavka;
+uses Dostavka,Oplata;
 
 procedure TForm1.dostavkaClick(Sender: TObject);
 begin
   Form3.ShowModal;
+end;
+
+procedure TForm1.oplataClick(Sender: TObject);
+begin
+  Form4.ShowModal;
 end;
 
 end.

@@ -49,6 +49,8 @@ begin
   text1:=Postavchik.Text;
   text2:=Poluchatel.Text;
   text3:=DateToStr(DostavkaDate.Date);
+  FDConnection1.StartTransaction;
+  try
   FDQuery2.SQL.Text := 'INSERT INTO DOSTAVKA (POSTAVCHIK, POLUCHATEL, DOSTAVKA_DATE) VALUES (:POSTAVCHIK, :POLUCHATEL, :DOSTAVKA_DATE) returning ID';
   FDQuery2.ParamByName('POSTAVCHIK').AsString := text1;
   FDQuery2.ParamByName('POLUCHATEL').AsString := text2;
@@ -58,7 +60,11 @@ begin
   FDQuery2.Open;
   idedit.Text:=FDQuery2.Fields[0].Value;
   iddostavka:=FDQuery2.Fields[0].Value;
-  FDQuery2.Free;
+  //FDQuery2.Free;
+  FDQuery2.Connection.Commit;
+  FDConnection1.Commit;
+  finally
+  end;
   Form2.ShowModal;
 end;
 

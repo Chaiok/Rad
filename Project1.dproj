@@ -110,6 +110,10 @@
             <Form>Form2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Oplata.pas">
+            <Form>Form4</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
