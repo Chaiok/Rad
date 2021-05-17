@@ -11,7 +11,7 @@ uses
   FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids,
   FireDAC.Comp.ScriptCommands, FireDAC.Stan.Util, FireDAC.Comp.Script,
-  Datasnap.Provider;
+  Datasnap.Provider, FireDAC.Phys.FB, FireDAC.Phys.FBDef;
 
 type
   TForm3 = class(TForm)

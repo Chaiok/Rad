@@ -48,6 +48,8 @@ procedure TForm2.Button1Click(Sender: TObject);
 var text1,text2: string;
     text3,text4: double;
 begin
+  //FDConnection1.Connected:=False;
+  //FDConnection1.Connected:=True;
   text1:=TovarName.Text;
   text2:=ID_IZM.Text;
   text3:=StrToFloat(Price.text);
@@ -60,6 +62,8 @@ begin
   FDQuery2.ParamByName('kolvo').AsFloat := text3;
   FDQuery2.ParamByName('price').AsFloat:=text4;
   FDQuery2.ExecSQL;
+  FDQuery2.Connection.Commit;
+  FDConnection1.Commit;
 end;
 
 procedure TForm2.Button2Click(Sender: TObject);
@@ -74,8 +78,6 @@ begin
   Rep.SetValue('#D#', FDQuery2.FieldByName('DOSTAVKA_DATE').AsString);
   Rep.SetValue('#PB_NAME#', FDQuery2.FieldByName('POSTAVCHIk').AsString);
   Rep.SetValue('#ID#', FDQuery2.FieldByName('ID').AsString);
-  FDQuery2.Free;
-  {
   FDQuery2.SQL.Text := 'select * from DOCLADNAY where iddostavka=:iddostavka';
   FDQuery2.ParamByName('iddostavka').AsInteger := iddostavka;
   FDQuery2.Open;
@@ -87,13 +89,13 @@ begin
     Rep.SetValue('#QUANT#', FDQuery2.FieldByName('KOLVO').AsString);
     Rep.SetValue('#PRICE#', FDQuery2.FieldByName('PRICE').AsString);
     Rep.SetValue('#SUMMA#', FDQuery2.FieldByName('SUMMA').AsString);
+    FDQuery2.Next;
   end;
   l:=Rep.CurrentLine-1;
-  FDQuery2.Free;
 
   Rep.PasteBand('C');
   Rep.SetSumFormula('#SUMMA#',f,l);
-  }
+
   Rep.Show;
 end;
 

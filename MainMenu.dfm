@@ -29,16 +29,16 @@ object Form1: TForm1
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'User_Name=SYSDBA'
-      'Password=44442222a'
       'Database=D:\radfiribbd\CHAIOKDB.FDB'
-      'Protocol=TCPIP'
-      'Server=localhost'
-      'DriverID=IB')
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
+    Connected = True
     Left = 32
     Top = 16
   end
   object FDQuery1: TFDQuery
+    Active = True
     Connection = FDConnection1
     SQL.Strings = (
       'select * from dostavka')

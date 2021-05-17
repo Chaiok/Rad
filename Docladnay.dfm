@@ -91,12 +91,10 @@ object Form2: TForm2
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
+      'Database=D:\radfiribbd\CHAIOKDB.FDB'
       'User_Name=SYSDBA'
       'Password=44442222a'
-      'Database=D:\radfiribbd\CHAIOKDB.FDB'
-      'Protocol=TCPIP'
-      'Server=localhost'
-      'DriverID=IB')
+      'DriverID=FB')
     Connected = True
     Left = 136
     Top = 8

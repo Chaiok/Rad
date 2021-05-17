@@ -44,6 +44,8 @@ var  text1,text2: TDateTime;
 Application: variant;
   I: Integer;
   S,O: double;
+  Range1: variant;
+  text3: string;
 begin
   Application:= ComObj.CreateOleObject('Word.Application');
   //Application.Documents.Add;
@@ -57,7 +59,12 @@ begin
     text1:=DateTimePicker2.DateTime;
     text2:=DateTimePicker1.DateTime;
   end;
-  
+  Application.Documents.Open('C:\Users\shaku\Downloads\test.docx');
+  Application.Documents.Item(1).Activate;
+  //Application.ActiveDocument.Paragraphs.Add;
+  //Range1:=Application.ActiveDocument.Paragraphs.Item(1).Range;
+  //Range1.InsertAfter('это текст InsertAfter');
+  Application.ActiveDocument.Paragraphs.Add.Range.InsertAfter('Поставщик  Сумма Оплаченно');
   for I := 0 to ListBox1.Count-1 do begin
     FDQuery1.SQL.Text :=
     'select id from DOSTAVKA where (postavchik=:postavchik and dostavka_date BETWEEN :text1 and :text2)';
@@ -68,18 +75,27 @@ begin
     Data.SqlTimSt.DateTimeToSQLTimeStamp(System.DateUtils.DateOf(text2));
     FDQuery1.Open;
 
-    while not FDQuery2.Eof do begin
+    S:=0;
+    O:=0;
+    while not FDQuery1.Eof do begin
       FDQuery2.SQL.Text :=
       'select summa,oplacheno from oplata where id=:id';
       FDQuery2.ParamByName('id').AsInteger := FDQuery1.FieldByName('ID').AsInteger;
       FDQuery2.Open;
-      FDQuery2.Next;
-    end;
-  end;
 
-  Application.Documents.Open('C:\Users\shaku\Downloads\test.docx');
-  Application.Documents.Item(1).Activate;
-  Application.ActiveDocument.Paragraphs.Add;
+      S:=S+FDQuery2.FieldByName('summa').AsFloat;
+      O:=O+FDQuery2.FieldByName('oplacheno').AsFloat;
+      
+      FDQuery1.Next;
+    end;
+
+    text3:= ListBox1.Items[I]+' '+S.ToString+'  '+(S-O).ToString;
+    Application.ActiveDocument.Paragraphs.Add.Range.InsertAfter(text3);
+    
+  end;
+  
+
+  //Application.ActiveDocument.Paragraphs.Add;
   Application.ActiveDocument.Close;
 end;
 

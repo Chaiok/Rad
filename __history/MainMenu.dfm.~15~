@@ -29,12 +29,10 @@ object Form1: TForm1
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'User_Name=SYSDBA'
-      'Password=44442222a'
       'Database=D:\radfiribbd\CHAIOKDB.FDB'
-      'Protocol=TCPIP'
-      'Server=localhost'
-      'DriverID=IB')
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'DriverID=FB')
     Left = 32
     Top = 16
   end
@@ -51,8 +49,8 @@ object Form1: TForm1
     Top = 144
   end
   object MainMenu1: TMainMenu
-    Left = 616
-    Top = 264
+    Left = 608
+    Top = 16
     object magazin: TMenuItem
       Caption = 'magazin'
       object dostavka: TMenuItem
@@ -61,13 +59,16 @@ object Form1: TForm1
       end
       object oplata: TMenuItem
         Caption = 'oplata'
+        OnClick = oplataClick
       end
     end
     object otchet: TMenuItem
       Caption = 'otchet'
+      OnClick = otchetClick
     end
     object diagramma: TMenuItem
       Caption = 'diagramma'
+      OnClick = diagrammaClick
     end
   end
 end
